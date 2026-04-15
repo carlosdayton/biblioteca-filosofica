@@ -98,7 +98,7 @@
 
 ## Fase 5: Remover Código Legado
 
-- [-] 14. Remover componentes não utilizados
+- [x] 14. Remover componentes não utilizados
   - [ ] 14.1 Deletar `frontend/src/pages/GraphPage.tsx`
   - [ ] 14.2 Deletar `frontend/src/components/GraphCanvas.tsx`
   - [ ] 14.3 Deletar `frontend/src/components/ConnectionModal.tsx`

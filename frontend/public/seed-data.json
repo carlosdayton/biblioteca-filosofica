@@ -1,0 +1,2070 @@
+{
+  "quotes": [
+    {
+      "id": "quote-1",
+      "text": "Você tem poder sobre sua mente, não sobre eventos externos. Perceba isso e encontrará força.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-3",
+          "name": "Dicotomia do Controle",
+          "color": "#7B6B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-2",
+      "text": "A felicidade de sua vida depende da qualidade de seus pensamentos.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-3",
+      "text": "Perca o tempo que você tem e você perderá o que não pode recuperar.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-4",
+      "text": "Quando você acorda de manhã, pense no precioso privilégio que é estar vivo — respirar, pensar, desfrutar, amar.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-5",
+      "text": "O impedimento à ação avança a ação. O que está no caminho torna-se o caminho.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-6",
+      "text": "Tudo que ouvimos é uma opinião, não um fato. Tudo que vemos é uma perspectiva, não a verdade.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-7",
+      "text": "Muito pouco é necessário para fazer uma vida feliz; está tudo dentro de você mesmo, em sua maneira de pensar.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-8",
+      "text": "A melhor vingança é não ser como o teu inimigo.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-9",
+      "text": "Recebe sem orgulho, abandona sem luta.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-3",
+          "name": "Dicotomia do Controle",
+          "color": "#7B6B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-10",
+      "text": "A alma torna-se tingida pela cor dos seus pensamentos.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-11",
+      "text": "Faz cada acto da tua vida como se fosse o último.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-12",
+      "text": "Não é a morte que o homem deve temer, mas nunca ter começado a viver.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-11",
+          "name": "Morte e Impermanência",
+          "color": "#6B6B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-13",
+      "text": "Olha para dentro. Dentro de ti está a fonte do bem, e ela pode jorrar incessantemente, se continuares a escavar.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-14",
+      "text": "Não te perturbes com o futuro. Chegarás a ele, se for necessário, com a mesma razão que usas agora para o presente.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-3",
+          "name": "Dicotomia do Controle",
+          "color": "#7B6B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-15",
+      "text": "Perde tempo quem faz outra coisa que não seja melhorar sua alma.",
+      "author": "Marco Aurélio",
+      "work": "Meditações",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-16",
+      "text": "Não busque que os eventos que acontecem sejam como você deseja; mas deseje que os eventos sejam como são, e você encontrará tranquilidade.",
+      "author": "Epicteto",
+      "work": "Enchiridion",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-3",
+          "name": "Dicotomia do Controle",
+          "color": "#7B6B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-17",
+      "text": "Homens não são perturbados pelas coisas, mas pelas opiniões que têm sobre as coisas.",
+      "author": "Epicteto",
+      "work": "Enchiridion",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-3",
+          "name": "Dicotomia do Controle",
+          "color": "#7B6B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-18",
+      "text": "Faça o melhor uso do que está em seu poder e tome o resto como acontece.",
+      "author": "Epicteto",
+      "work": "Enchiridion",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-3",
+          "name": "Dicotomia do Controle",
+          "color": "#7B6B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-19",
+      "text": "Riqueza consiste não em ter grandes posses, mas em ter poucas necessidades.",
+      "author": "Epicteto",
+      "work": "Discursos",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-20",
+      "text": "Não é o que acontece com você, mas como você reage a isso que importa.",
+      "author": "Epicteto",
+      "work": "Enchiridion",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-3",
+          "name": "Dicotomia do Controle",
+          "color": "#7B6B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-21",
+      "text": "Das coisas que existem, umas dependem de nós, outras não.",
+      "author": "Epicteto",
+      "work": "Enchiridion",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-3",
+          "name": "Dicotomia do Controle",
+          "color": "#7B6B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-22",
+      "text": "A liberdade não é obtida pela satisfação dos desejos, mas pela eliminação do desejo.",
+      "author": "Epicteto",
+      "work": "Discursos",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-23",
+      "text": "Não é possível aprender o que já se pensa saber.",
+      "author": "Epicteto",
+      "work": "Discursos",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-24",
+      "text": "Tens duas orelhas e uma boca para ouvires o dobro do que falas.",
+      "author": "Epicteto",
+      "work": "Discursos",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-25",
+      "text": "Omnia, Lucili, aliena sunt, tempus tantum nostrum est. — Tudo é alheio, Lucílio; só o tempo é nosso.",
+      "author": "Sêneca",
+      "work": "Cartas a Lucílio",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-26",
+      "text": "Dum differtur vita transcurrit. — Enquanto adiamos, a vida passa.",
+      "author": "Sêneca",
+      "work": "Sobre a Brevidade da Vida",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-27",
+      "text": "Não é que tenhamos pouco tempo, mas que desperdiçamos muito.",
+      "author": "Sêneca",
+      "work": "Sobre a Brevidade da Vida",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-28",
+      "text": "Nenhum vento é favorável para quem não sabe para qual porto está navegando.",
+      "author": "Sêneca",
+      "work": "Cartas a Lucílio",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-29",
+      "text": "A vida é longa se souberes usá-la.",
+      "author": "Sêneca",
+      "work": "Sobre a Brevidade da Vida",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-30",
+      "text": "Vivere militare est. — Viver é lutar.",
+      "author": "Sêneca",
+      "work": "Cartas a Lucílio",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-31",
+      "text": "Nemo potest personam diu ferre. — Ninguém pode usar uma máscara por muito tempo.",
+      "author": "Sêneca",
+      "work": "Cartas a Lucílio",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-32",
+      "text": "A tranquilidade da alma vem de não desejar nada além do que se tem.",
+      "author": "Sêneca",
+      "work": "Sobre a Tranquilidade da Alma",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-33",
+      "text": "Retire-se para dentro de si mesmo tanto quanto puder; conviva com aqueles que podem torná-lo melhor.",
+      "author": "Sêneca",
+      "work": "Sobre a Tranquilidade da Alma",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-34",
+      "text": "O homem tem dois ouvidos e uma boca para que possa ouvir o dobro do que fala.",
+      "author": "Zenão de Cítio",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-35",
+      "text": "Seguir a natureza é o objetivo da vida.",
+      "author": "Zenão de Cítio",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-12",
+          "name": "Natureza",
+          "color": "#4A8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-36",
+      "text": "A virtude é suficiente para a felicidade.",
+      "author": "Crisipo de Solos",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-1",
+          "name": "Estoicismo",
+          "color": "#8B7355",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-37",
+      "text": "Só sei que nada sei.",
+      "author": "Sócrates",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-38",
+      "text": "Uma vida não examinada não vale a pena ser vivida.",
+      "author": "Sócrates",
+      "work": "Apologia",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-39",
+      "text": "Não posso ensinar nada a ninguém. Só posso fazê-los pensar.",
+      "author": "Sócrates",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-40",
+      "text": "Cuide de sua alma.",
+      "author": "Sócrates",
+      "work": "Apologia",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-41",
+      "text": "O começo é a parte mais importante do trabalho.",
+      "author": "Platão",
+      "work": "A República",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-42",
+      "text": "Bons homens não precisam de leis para dizer-lhes agir responsavelmente, enquanto homens ruins encontrarão uma maneira de contornar as leis.",
+      "author": "Platão",
+      "work": "A República",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-43",
+      "text": "Somos o que repetidamente fazemos. A excelência, portanto, não é um ato, mas um hábito.",
+      "author": "Aristóteles",
+      "work": "Ética a Nicômaco",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-44",
+      "text": "A felicidade é a atividade da alma de acordo com a virtude.",
+      "author": "Aristóteles",
+      "work": "Ética a Nicômaco",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-45",
+      "text": "Educar a mente sem educar o coração não é educação alguma.",
+      "author": "Aristóteles",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-46",
+      "text": "Conhecer-se a si mesmo é o começo de toda sabedoria.",
+      "author": "Aristóteles",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-47",
+      "text": "O homem é por natureza um animal político.",
+      "author": "Aristóteles",
+      "work": "Política",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-12",
+          "name": "Natureza",
+          "color": "#4A8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-48",
+      "text": "Não se pode entrar duas vezes no mesmo rio.",
+      "author": "Heráclito",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-12",
+          "name": "Natureza",
+          "color": "#4A8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-11",
+          "name": "Morte e Impermanência",
+          "color": "#6B6B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-49",
+      "text": "O caráter é o destino.",
+      "author": "Heráclito",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-50",
+      "text": "Tudo flui, nada permanece.",
+      "author": "Heráclito",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-12",
+          "name": "Natureza",
+          "color": "#4A8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-11",
+          "name": "Morte e Impermanência",
+          "color": "#6B6B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-51",
+      "text": "O homem mais rico é aquele cujos prazeres são os mais baratos.",
+      "author": "Diógenes de Sínope",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-52",
+      "text": "Não estrague o que você tem desejando o que não tem; lembre-se que o que você tem agora foi uma vez entre as coisas que você apenas esperava.",
+      "author": "Epicuro",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-53",
+      "text": "A morte não é nada para nós; quando existimos, a morte não está presente, e quando a morte está presente, então não existimos.",
+      "author": "Epicuro",
+      "work": "Carta a Meneceu",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-11",
+          "name": "Morte e Impermanência",
+          "color": "#6B6B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-54",
+      "text": "O que não me mata me fortalece.",
+      "author": "Friedrich Nietzsche",
+      "work": "Crepúsculo dos Ídolos",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-55",
+      "text": "Aquele que tem um porquê para viver pode suportar quase qualquer como.",
+      "author": "Friedrich Nietzsche",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-8",
+          "name": "Existencialismo",
+          "color": "#8E6B7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-56",
+      "text": "Amor fati: ame seu destino.",
+      "author": "Friedrich Nietzsche",
+      "work": "Ecce Homo",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-8",
+          "name": "Existencialismo",
+          "color": "#8E6B7B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-57",
+      "text": "Sem música, a vida seria um erro.",
+      "author": "Friedrich Nietzsche",
+      "work": "Crepúsculo dos Ídolos",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-58",
+      "text": "Você deve ter caos dentro de você para dar à luz uma estrela dançante.",
+      "author": "Friedrich Nietzsche",
+      "work": "Assim Falou Zaratustra",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-8",
+          "name": "Existencialismo",
+          "color": "#8E6B7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": false,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-59",
+      "text": "A existência precede a essência.",
+      "author": "Jean-Paul Sartre",
+      "work": "O Existencialismo é um Humanismo",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-8",
+          "name": "Existencialismo",
+          "color": "#8E6B7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-60",
+      "text": "O homem está condenado a ser livre.",
+      "author": "Jean-Paul Sartre",
+      "work": "O Existencialismo é um Humanismo",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-8",
+          "name": "Existencialismo",
+          "color": "#8E6B7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-61",
+      "text": "Deve-se imaginar Sísifo feliz.",
+      "author": "Albert Camus",
+      "work": "O Mito de Sísifo",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-8",
+          "name": "Existencialismo",
+          "color": "#8E6B7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-62",
+      "text": "No meio do inverno, descobri dentro de mim um verão invencível.",
+      "author": "Albert Camus",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-8",
+          "name": "Existencialismo",
+          "color": "#8E6B7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-5",
+          "name": "Amor Fati",
+          "color": "#8E7B4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-63",
+      "text": "A paz não é a ausência de guerra; é uma virtude, um estado de espírito, uma disposição para a benevolência, confiança e justiça.",
+      "author": "Baruch Spinoza",
+      "work": "Tratado Político",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-64",
+      "text": "Não rir, não lamentar, não detestar, mas compreender.",
+      "author": "Baruch Spinoza",
+      "work": "Tratado Político",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-65",
+      "text": "Age apenas segundo uma máxima tal que possas ao mesmo tempo querer que ela se torne uma lei universal.",
+      "author": "Immanuel Kant",
+      "work": "Fundamentação da Metafísica dos Costumes",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-66",
+      "text": "Duas coisas me enchem de admiração e reverência crescentes: o céu estrelado acima de mim e a lei moral dentro de mim.",
+      "author": "Immanuel Kant",
+      "work": "Crítica da Razão Prática",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-7",
+          "name": "Ética",
+          "color": "#6B8E7B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-12",
+          "name": "Natureza",
+          "color": "#4A8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-67",
+      "text": "Filosofar é aprender a morrer.",
+      "author": "Michel de Montaigne",
+      "work": "Ensaios",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-11",
+          "name": "Morte e Impermanência",
+          "color": "#6B6B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-4",
+          "name": "Memento Mori",
+          "color": "#8E6B6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-68",
+      "text": "O coração tem razões que a própria razão desconhece.",
+      "author": "Blaise Pascal",
+      "work": "Pensamentos",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-69",
+      "text": "Todo o infortúnio dos homens vem de uma única coisa: não saber ficar quieto em um quarto.",
+      "author": "Blaise Pascal",
+      "work": "Pensamentos",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-70",
+      "text": "Não importa quão devagar você vá, desde que não pare.",
+      "author": "Confúcio",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-2",
+          "name": "Virtude",
+          "color": "#6B8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-71",
+      "text": "Escolha um trabalho que você ame e não terá que trabalhar um único dia em sua vida.",
+      "author": "Confúcio",
+      "work": null,
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-10",
+          "name": "Felicidade",
+          "color": "#8E8A4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-72",
+      "text": "Conhecer os outros é sabedoria; conhecer a si mesmo é iluminação.",
+      "author": "Lao-Tsé",
+      "work": "Tao Te Ching",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-6",
+          "name": "Razão",
+          "color": "#4A7B8E",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-73",
+      "text": "Uma jornada de mil milhas começa com um único passo.",
+      "author": "Lao-Tsé",
+      "work": "Tao Te Ching",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-12",
+          "name": "Natureza",
+          "color": "#4A8E6B",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    },
+    {
+      "id": "quote-74",
+      "text": "A natureza não se apressa, mas tudo é realizado.",
+      "author": "Lao-Tsé",
+      "work": "Tao Te Ching",
+      "reflection": null,
+      "tags": [
+        {
+          "id": "tag-12",
+          "name": "Natureza",
+          "color": "#4A8E6B",
+          "quoteCount": 0
+        },
+        {
+          "id": "tag-9",
+          "name": "Sabedoria",
+          "color": "#7B8E4A",
+          "quoteCount": 0
+        }
+      ],
+      "isFavorite": true,
+      "createdAt": "2026-04-15T14:41:57.871405Z",
+      "updatedAt": "2026-04-15T14:41:57.871405Z"
+    }
+  ],
+  "tags": [
+    {
+      "id": "tag-1",
+      "name": "Estoicismo",
+      "color": "#8B7355",
+      "quoteCount": 36
+    },
+    {
+      "id": "tag-2",
+      "name": "Virtude",
+      "color": "#6B8E6B",
+      "quoteCount": 20
+    },
+    {
+      "id": "tag-3",
+      "name": "Dicotomia do Controle",
+      "color": "#7B6B8E",
+      "quoteCount": 8
+    },
+    {
+      "id": "tag-4",
+      "name": "Memento Mori",
+      "color": "#8E6B6B",
+      "quoteCount": 10
+    },
+    {
+      "id": "tag-5",
+      "name": "Amor Fati",
+      "color": "#8E7B4A",
+      "quoteCount": 12
+    },
+    {
+      "id": "tag-6",
+      "name": "Razão",
+      "color": "#4A7B8E",
+      "quoteCount": 21
+    },
+    {
+      "id": "tag-7",
+      "name": "Ética",
+      "color": "#6B8E7B",
+      "quoteCount": 13
+    },
+    {
+      "id": "tag-8",
+      "name": "Existencialismo",
+      "color": "#8E6B7B",
+      "quoteCount": 7
+    },
+    {
+      "id": "tag-9",
+      "name": "Sabedoria",
+      "color": "#7B8E4A",
+      "quoteCount": 31
+    },
+    {
+      "id": "tag-10",
+      "name": "Felicidade",
+      "color": "#8E8A4A",
+      "quoteCount": 13
+    },
+    {
+      "id": "tag-11",
+      "name": "Morte e Impermanência",
+      "color": "#6B6B8E",
+      "quoteCount": 5
+    },
+    {
+      "id": "tag-12",
+      "name": "Natureza",
+      "color": "#4A8E6B",
+      "quoteCount": 7
+    }
+  ],
+  "nextQuoteId": 75,
+  "nextTagId": 13,
+  "version": "1.0.0",
+  "lastModified": "2026-04-15T14:41:57.871405Z",
+  "exportedAt": "2026-04-15T14:41:57.871405Z",
+  "exportVersion": "1.0.0"
+}

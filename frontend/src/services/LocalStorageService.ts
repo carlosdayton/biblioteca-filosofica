@@ -82,6 +82,36 @@ class LocalStorageService {
     }
   }
 
+  // Carrega dados iniciais do seed (chamado uma vez na primeira visita)
+  async loadSeedData(): Promise<boolean> {
+    try {
+      const alreadySeeded = localStorage.getItem(STORAGE_KEY + '-seeded')
+      if (alreadySeeded || this.data.quotes.length > 0) return false
+
+      const response = await fetch('/seed-data.json')
+      if (!response.ok) return false
+
+      const seedData = await response.json()
+      if (!this.isValidData(seedData)) return false
+
+      this.data = {
+        quotes: seedData.quotes,
+        tags: seedData.tags,
+        nextQuoteId: seedData.nextQuoteId,
+        nextTagId: seedData.nextTagId,
+        version: seedData.version,
+        lastModified: new Date().toISOString()
+      }
+
+      this.saveData()
+      localStorage.setItem(STORAGE_KEY + '-seeded', 'true')
+      return true
+    } catch (error) {
+      console.error('Erro ao carregar seed:', error)
+      return false
+    }
+  }
+
   private saveData(): void {
     try {
       this.data.lastModified = new Date().toISOString()

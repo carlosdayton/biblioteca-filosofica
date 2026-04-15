@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import NavBar from './components/NavBar'
 import Breadcrumbs from './components/Breadcrumbs'
 import Toast from './components/Toast'
@@ -15,10 +16,21 @@ import NotFoundPage from './pages/NotFoundPage'
 import { useToast } from './hooks/useToast'
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
 import { ToastContext } from './context/ToastContext'
+import { localStorageService } from './services/LocalStorageService'
 
 export default function App() {
   const { toasts, addToast, removeToast } = useToast()
   useKeyboardShortcuts()
+
+  // Carregar citações iniciais na primeira visita
+  useEffect(() => {
+    localStorageService.loadSeedData().then(loaded => {
+      if (loaded) {
+        // Forçar re-render recarregando a página uma vez
+        window.location.reload()
+      }
+    })
+  }, [])
 
   return (
     <ToastContext.Provider value={addToast}>
