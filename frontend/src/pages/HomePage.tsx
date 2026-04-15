@@ -161,6 +161,7 @@ export default function HomePage() {
             {[
               { to: '/quotes/new', icon: '✍️', label: 'Nova Citação', desc: 'Registre uma nova reflexão' },
               { to: '/search', icon: '🔍', label: 'Buscar', desc: 'Encontre por tema ou ideia' },
+              { to: '/graph', icon: '🌌', label: 'Constelação', desc: 'Visualize as conexões' },
             ].map(({ to, icon, label, desc }) => (
               <Link key={to} to={to} style={{ textDecoration: 'none' }}>
                 <div style={{

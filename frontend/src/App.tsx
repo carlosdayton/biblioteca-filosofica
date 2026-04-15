@@ -12,6 +12,7 @@ import QuoteDetailPage from './pages/QuoteDetailPage'
 import QuoteNewPage from './pages/QuoteNewPage'
 import QuoteEditPage from './pages/QuoteEditPage'
 import SearchPage from './pages/SearchPage'
+import GraphPage from './pages/GraphPage'
 import NotFoundPage from './pages/NotFoundPage'
 import { useToast } from './hooks/useToast'
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/quotes/:id" element={<QuoteDetailPage />} />
           <Route path="/quotes/:id/edit" element={<QuoteEditPage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/graph" element={<GraphPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </PageTransition>

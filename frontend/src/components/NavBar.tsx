@@ -7,6 +7,7 @@ const navLinks = [
   { to: '/', label: 'Início', end: true },
   { to: '/quotes', label: 'Citações', end: false },
   { to: '/search', label: 'Buscar', end: false },
+  { to: '/graph', label: 'Constelação', end: false },
 ]
 
 export default function NavBar() {
