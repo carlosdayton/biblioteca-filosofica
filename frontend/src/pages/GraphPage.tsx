@@ -193,11 +193,12 @@ export default function GraphPage() {
 
           {/* Legenda */}
           <div style={{
-            position: 'absolute', bottom: 16, left: 16,
+            position: 'absolute', bottom: 72, left: 16,
             background: 'rgba(13,7,5,0.85)',
             border: '1px solid rgba(201,168,76,0.2)',
             borderRadius: 10, padding: '10px 14px',
             display: 'flex', flexDirection: 'column', gap: 6,
+            pointerEvents: 'none',
           }}>
             <div style={{ fontFamily: fonts.sans, fontSize: 10, color: 'rgba(201,168,76,0.5)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 2 }}>Legenda</div>
             <LegendItem color={colors.gold} label="Conexão manual" dashed={false} />
