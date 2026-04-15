@@ -1,14 +1,14 @@
 import { Upload } from 'lucide-react'
 import { useRef } from 'react'
 import { localStorageService } from '../services/LocalStorageService'
-import { useToast } from '../hooks/useToast'
+import { useToastContext } from '../context/ToastContext'
 
 interface ImportButtonProps {
   onImportSuccess?: () => void
 }
 
 export function ImportButton({ onImportSuccess }: ImportButtonProps) {
-  const { showToast } = useToast()
+  const addToast = useToastContext()
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const handleClick = () => {
@@ -40,7 +40,7 @@ export function ImportButton({ onImportSuccess }: ImportButtonProps) {
       // Importar dados
       localStorageService.importData(text)
       
-      showToast('Dados importados com sucesso!', 'success')
+      addToast('Dados importados com sucesso!', 'success')
       
       // Callback de sucesso
       onImportSuccess?.()
@@ -52,7 +52,7 @@ export function ImportButton({ onImportSuccess }: ImportButtonProps) {
     } catch (error) {
       console.error('Erro ao importar dados:', error)
       const message = error instanceof Error ? error.message : 'Erro ao importar dados'
-      showToast(message, 'error')
+      addToast(message, 'error')
     } finally {
       // Limpar input
       if (fileInputRef.current) {

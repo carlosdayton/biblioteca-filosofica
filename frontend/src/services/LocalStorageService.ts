@@ -1,4 +1,4 @@
-import { Quote, Tag, PaginatedQuotes } from '../types'
+import { Quote, Tag } from '../types'
 
 // Chave principal do localStorage
 const STORAGE_KEY = 'diario-filosofico-data'

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import ExportButton from './ExportButton'
+import { ExportButton } from './ExportButton'
 import { colors, fonts, shadows, transitions } from '../styles/theme'
 
 const navLinks = [
