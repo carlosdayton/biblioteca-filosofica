@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useQueryClient } from '@tanstack/react-query'
-import { useDailyQuote } from '../hooks/useQuotes'
+import { useLocalDailyQuote } from '../hooks/useLocalQuotes'
 import { colors, fonts, shadows, gradients, transitions } from '../styles/theme'
 
 export default function DailyQuote() {
   const navigate = useNavigate()
-  const queryClient = useQueryClient()
-  const { data: quote, isLoading, isError } = useDailyQuote()
+  const { data: quote, isLoading, isError, refetch } = useLocalDailyQuote()
   const [visible, setVisible] = useState(false)
 
-  // Fade-in on mount and whenever quote changes
   useEffect(() => {
     setVisible(false)
     const timer = setTimeout(() => setVisible(true), 80)
@@ -20,8 +17,7 @@ export default function DailyQuote() {
   function handleNewQuote() {
     setVisible(false)
     setTimeout(() => {
-      queryClient.invalidateQueries({ queryKey: ['daily'] })
-      // Visible will be set to true by the useEffect when quote.id changes
+      refetch()
     }, 400)
   }
 

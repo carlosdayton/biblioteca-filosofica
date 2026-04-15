@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import DailyQuote from '../components/DailyQuote'
 import QuoteCard from '../components/QuoteCard'
-import { useQuotes } from '../hooks/useQuotes'
+import { useLocalQuotes } from '../hooks/useLocalQuotes'
 import { colors, fonts, gradients, shadows, transitions } from '../styles/theme'
 
 export default function HomePage() {
-  const { data } = useQuotes(1)
+  const { data } = useLocalQuotes(1)
   const recent = data?.items.slice(0, 3) ?? []
 
   return (
@@ -161,7 +161,6 @@ export default function HomePage() {
             {[
               { to: '/quotes/new', icon: '✍️', label: 'Nova Citação', desc: 'Registre uma nova reflexão' },
               { to: '/search', icon: '🔍', label: 'Buscar', desc: 'Encontre por tema ou ideia' },
-              { to: '/graph', icon: '🕸️', label: 'Mapa', desc: 'Visualize as conexões' },
             ].map(({ to, icon, label, desc }) => (
               <Link key={to} to={to} style={{ textDecoration: 'none' }}>
                 <div style={{

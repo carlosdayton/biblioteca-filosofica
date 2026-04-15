@@ -44,7 +44,7 @@
   - [ ] 4.4 Implementar confirmação antes de importar
   - [ ] 4.5 Adicionar feedback visual (toast)
 
-- [-] 5. Criar StorageStats Component
+- [x] 5. Criar StorageStats Component
   - [ ] 5.1 Criar arquivo `frontend/src/components/StorageStats.tsx`
   - [ ] 5.2 Exibir contagem de citações
   - [ ] 5.3 Exibir contagem de tags
@@ -53,25 +53,25 @@
 
 ## Fase 4: Atualizar Componentes Existentes
 
-- [ ] 6. Atualizar App.tsx
+- [-] 6. Atualizar App.tsx
   - [ ] 6.1 Remover QueryClientProvider
   - [ ] 6.2 Remover import de @tanstack/react-query
   - [ ] 6.3 Remover rota `/graph`
   - [ ] 6.4 Remover import de GraphPage
 
-- [ ] 7. Atualizar NavBar.tsx
+- [-] 7. Atualizar NavBar.tsx
   - [ ] 7.1 Remover link "Mapa de Conexões"
   - [ ] 7.2 Adicionar ExportButton
   - [ ] 7.3 Atualizar estilos se necessário
 
-- [ ] 8. Atualizar SearchPage.tsx
+- [-] 8. Atualizar SearchPage.tsx
   - [ ] 8.1 Substituir useSearch por useLocalSearch
   - [ ] 8.2 Remover toggle de modo semântico
   - [ ] 8.3 Remover barra de relevância
   - [ ] 8.4 Atualizar mensagens de UI
   - [ ] 8.5 Simplificar lógica de busca
 
-- [ ] 9. Atualizar QuoteDetailPage.tsx
+- [-] 9. Atualizar QuoteDetailPage.tsx
   - [ ] 9.1 Substituir useQuote por useLocalQuote
   - [ ] 9.2 Remover seção de conexões
   - [ ] 9.3 Remover botão "Ver no Mapa"
@@ -98,7 +98,7 @@
 
 ## Fase 5: Remover Código Legado
 
-- [ ] 14. Remover componentes não utilizados
+- [-] 14. Remover componentes não utilizados
   - [ ] 14.1 Deletar `frontend/src/pages/GraphPage.tsx`
   - [ ] 14.2 Deletar `frontend/src/components/GraphCanvas.tsx`
   - [ ] 14.3 Deletar `frontend/src/components/ConnectionModal.tsx`

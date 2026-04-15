@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useQueryClient } from '@tanstack/react-query'
-import client from '../api/client'
+import { localStorageService } from '../services/LocalStorageService'
 import type { Quote } from '../types'
 import { colors, fonts, shadows, gradients, transitions } from '../styles/theme'
 import ConfirmModal from './ConfirmModal'
@@ -14,7 +13,6 @@ interface QuoteCardProps {
 
 export default function QuoteCard({ quote, onDeleted }: QuoteCardProps) {
   const navigate = useNavigate()
-  const queryClient = useQueryClient()
   const addToast = useToastContext()
   const [deleting, setDeleting] = React.useState(false)
   const [hovered, setHovered] = React.useState(false)
@@ -22,15 +20,14 @@ export default function QuoteCard({ quote, onDeleted }: QuoteCardProps) {
   const [favorite, setFavorite] = React.useState(quote.isFavorite)
   const [togglingFav, setTogglingFav] = React.useState(false)
 
-  async function handleToggleFavorite(e: React.MouseEvent) {
+  function handleToggleFavorite(e: React.MouseEvent) {
     e.stopPropagation()
     if (togglingFav) return
     setTogglingFav(true)
     const next = !favorite
     setFavorite(next)
     try {
-      await client.put(`/quotes/${quote.id}`, { is_favorite: next })
-      queryClient.invalidateQueries({ queryKey: ['quotes'] })
+      localStorageService.updateQuote(quote.id, { isFavorite: next })
       addToast(next ? 'Citação marcada como favorita' : 'Citação removida dos favoritos', 'success')
     } catch {
       setFavorite(!next)
@@ -40,11 +37,10 @@ export default function QuoteCard({ quote, onDeleted }: QuoteCardProps) {
     }
   }
 
-  async function handleDelete() {
+  function handleDelete() {
     setDeleting(true)
     try {
-      await client.delete(`/quotes/${quote.id}`)
-      queryClient.invalidateQueries({ queryKey: ['quotes'] })
+      localStorageService.deleteQuote(quote.id)
       addToast('Citação deletada com sucesso', 'success')
       onDeleted?.()
     } catch {

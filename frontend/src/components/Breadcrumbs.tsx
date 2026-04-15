@@ -1,11 +1,11 @@
 import { Link, useLocation, useParams } from 'react-router-dom'
-import { useQuote } from '../hooks/useQuotes'
+import { useLocalQuote } from '../hooks/useLocalQuotes'
 import { colors, fonts, transitions } from '../styles/theme'
 
 export default function Breadcrumbs() {
   const location = useLocation()
   const { id } = useParams<{ id: string }>()
-  const { data: quote } = useQuote(id ?? '', { enabled: !!id })
+  const { data: quote } = useLocalQuote(id ?? '')
 
   const pathSegments = location.pathname.split('/').filter(Boolean)
   
@@ -34,8 +34,6 @@ export default function Breadcrumbs() {
     }
   } else if (pathSegments[0] === 'search') {
     breadcrumbs.push({ label: 'Buscar', path: '/search' })
-  } else if (pathSegments[0] === 'graph') {
-    breadcrumbs.push({ label: 'Grafo', path: '/graph' })
   }
 
   return (

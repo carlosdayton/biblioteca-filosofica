@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useTags } from '../hooks/useQuotes'
+import { useLocalTags } from '../hooks/useLocalQuotes'
 import type { Quote, Tag } from '../types'
 import { colors, fonts, shadows, gradients, transitions } from '../styles/theme'
 
@@ -56,7 +56,7 @@ const errorStyle: React.CSSProperties = {
 }
 
 export default function QuoteForm({ initialData, onSubmit, onCancel }: QuoteFormProps) {
-  const { data: availableTags = [], isLoading: tagsLoading } = useTags()
+  const { data: availableTags = [], isLoading: tagsLoading } = useLocalTags()
 
   const [text, setText] = useState(initialData?.text ?? '')
   const [author, setAuthor] = useState(initialData?.author ?? '')

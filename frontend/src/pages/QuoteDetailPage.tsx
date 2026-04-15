@@ -1,8 +1,7 @@
 import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useQueryClient } from '@tanstack/react-query'
-import { useQuote } from '../hooks/useQuotes'
-import client from '../api/client'
+import { useLocalQuote } from '../hooks/useLocalQuotes'
+import { localStorageService } from '../services/LocalStorageService'
 import { colors, fonts, shadows, gradients } from '../styles/theme'
 import ConfirmModal from '../components/ConfirmModal'
 import PageHeader from '../components/PageHeader'
@@ -11,18 +10,16 @@ import { useToastContext } from '../context/ToastContext'
 export default function QuoteDetailPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const queryClient = useQueryClient()
   const addToast = useToastContext()
-  const { data: quote, isLoading, isError } = useQuote(id ?? '')
+  const { data: quote, isLoading, isError } = useLocalQuote(id ?? '')
   const [deleting, setDeleting] = React.useState(false)
   const [confirmOpen, setConfirmOpen] = React.useState(false)
 
-  async function handleDelete() {
+  function handleDelete() {
     if (!quote) return
     setDeleting(true)
     try {
-      await client.delete(`/quotes/${quote.id}`)
-      queryClient.invalidateQueries({ queryKey: ['quotes'] })
+      localStorageService.deleteQuote(quote.id)
       addToast('Citação deletada com sucesso', 'success')
       navigate('/quotes')
     } catch {

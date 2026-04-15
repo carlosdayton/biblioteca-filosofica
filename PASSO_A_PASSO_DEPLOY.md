@@ -84,20 +84,47 @@ SELECT * FROM pg_extension WHERE extname = 'vector';
 
 ### 2.3 Copiar Connection String
 
-1. No menu lateral, clique em **"Settings"** (ícone de engrenagem)
-2. Clique em **"Database"**
-3. Role até encontrar **"Connection string"**
-4. Selecione a aba **"URI"**
-5. Copie a string (vai parecer com isso):
+**MÉTODO ATUALIZADO (Interface Nova do Supabase):**
+
+**Opção 1 - Via botão "Connect":**
+1. No topo da página do Supabase, clique no botão verde **"Connect"** (canto superior direito)
+2. Uma modal vai abrir com várias opções de conexão
+3. Selecione **"URI"** ou **"Connection string"**
+4. Copie a string que aparece
+
+**Opção 2 - Via Project Settings:**
+1. Clique no **ícone de engrenagem** (Settings) no menu lateral
+2. Procure por **"Database"** no menu lateral esquerdo (pode estar em CONFIGURATION)
+3. Se não aparecer "Database", tente clicar em **"Project Settings"** primeiro
+4. Role a página até encontrar **"Connection Info"** ou **"Connection string"**
+
+**Opção 3 - Via Database (menu principal):**
+1. No menu lateral PRINCIPAL (não Settings), clique em **"Database"** (ícone de cilindro)
+2. No topo da página, procure por **"Connection info"** ou um botão **"Connect"**
+3. Clique e copie a URI
+
+**Formato da string:**
+```
+postgresql://postgres.[projeto-ref]:[YOUR-PASSWORD]@aws-0-sa-east-1.pooler.supabase.com:6543/postgres
+```
+
+**Ajustes necessários:**
+1. **SUBSTITUA** `[YOUR-PASSWORD]` pela senha que você criou no passo 2.1
+2. **ADICIONE** `+asyncpg` depois de `postgresql`:
    ```
-   postgresql://postgres:[YOUR-PASSWORD]@db.xxxxxxxxxxxxx.supabase.co:5432/postgres
+   postgresql+asyncpg://postgres.[projeto-ref]:SuaSenha@aws-0-sa-east-1.pooler.supabase.com:6543/postgres
    ```
-6. **SUBSTITUA** `[YOUR-PASSWORD]` pela senha que você criou no passo 2.1
-7. **ADICIONE** `+asyncpg` depois de `postgresql`:
-   ```
-   postgresql+asyncpg://postgres:MinhaSenh@123!@db.xxxxxxxxxxxxx.supabase.co:5432/postgres
-   ```
-8. **SALVE** essa string em um arquivo temporário (você vai usar no próximo passo)
+
+3. **SALVE** essa string em um arquivo temporário (você vai usar no próximo passo)
+
+**💡 ALTERNATIVA RÁPIDA:** 
+Se ainda não encontrar, use este formato manual:
+```
+postgresql+asyncpg://postgres:SUA_SENHA@db.[PROJECT-REF].supabase.co:5432/postgres
+```
+Substitua:
+- `SUA_SENHA` = senha que você criou
+- `[PROJECT-REF]` = o Project ID que aparece em Settings → General (exemplo: `cfbofpuuzcmm4ctyq`)
 
 **✅ Pronto!** Seu banco de dados está configurado!
 
@@ -131,7 +158,7 @@ Branch: main
 Root Directory: backend
 Runtime: Python 3
 
-Build Command: pip install -r requirements.txt
+Build Command: pip install -r requirements.txt && alembic upgrade head
 Start Command: uvicorn app.main:app --host 0.0.0.0 --port $PORT
 
 Instance Type: Free

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useQuotes, useTags } from '../hooks/useQuotes'
+import { useLocalQuotes, useLocalTags } from '../hooks/useLocalQuotes'
 import QuoteCard from '../components/QuoteCard'
 import PageHeader from '../components/PageHeader'
 import SkeletonCard from '../components/SkeletonCard'
@@ -13,8 +13,8 @@ export default function QuoteListPage() {
   const [page, setPage] = useState(1)
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const [sortBy, setSortBy] = useState<SortOption>('date-desc')
-  const { data, isLoading, isError } = useQuotes(page)
-  const { data: tags = [] } = useTags()
+  const { data, isLoading, isError } = useLocalQuotes(page)
+  const { data: tags = [] } = useLocalTags()
 
   let filtered = selectedTag
     ? (data?.items ?? []).filter(q => q.tags.some(t => t.id === selectedTag))
