@@ -1,6 +1,7 @@
 import { Download } from 'lucide-react'
 import { localStorageService } from '../services/LocalStorageService'
 import { useToastContext } from '../context/ToastContext'
+import { colors, fonts, gradients, shadows, transitions } from '../styles/theme'
 
 export function ExportButton() {
   const addToast = useToastContext()
@@ -29,11 +30,36 @@ export function ExportButton() {
   return (
     <button
       onClick={handleExport}
-      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-md hover:shadow-lg"
       title="Exportar todos os dados para arquivo JSON"
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 8,
+        padding: '8px 16px',
+        background: gradients.goldRich,
+        border: 'none',
+        borderRadius: 8,
+        fontFamily: fonts.sans,
+        fontSize: 13,
+        fontWeight: 700,
+        color: colors.brown,
+        cursor: 'pointer',
+        boxShadow: shadows.cardGold,
+        letterSpacing: '0.03em',
+        transition: `all ${transitions.normal}`,
+        whiteSpace: 'nowrap',
+      }}
+      onMouseEnter={e => {
+        e.currentTarget.style.transform = 'translateY(-2px)'
+        e.currentTarget.style.boxShadow = shadows.cardGoldHover
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.transform = 'none'
+        e.currentTarget.style.boxShadow = shadows.cardGold
+      }}
     >
-      <Download size={18} />
-      <span className="hidden sm:inline">Exportar Dados</span>
+      <Download size={15} />
+      <span>Exportar Dados</span>
     </button>
   )
 }
