@@ -1,0 +1,23 @@
+# Render Blueprint para Deploy Automático
+# https://render.com/docs/blueprint-spec
+
+services:
+  # Backend API (FastAPI)
+  - type: web
+    name: diario-filosofico-api
+    runtime: python
+    region: oregon
+    plan: free
+    branch: main
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false  # Configurar manualmente no dashboard
+      - key: CORS_ORIGINS
+        value: "*"  # Atualizar depois com URL do frontend
+      - key: PYTHON_VERSION
+        value: "3.11"
+    healthCheckPath: /
+    autoDeploy: true

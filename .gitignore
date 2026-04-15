@@ -1,0 +1,278 @@
+# ========================================
+# Diário Filosófico - .gitignore
+# ========================================
+
+# ========================================
+# Arquivos Sensíveis (NUNCA COMMITAR!)
+# ========================================
+.env
+.env.*
+!.env.example
+.env.deploy
+*.pem
+*.key
+*.cert
+
+# ========================================
+# Python / Backend
+# ========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ========================================
+# Node.js / Frontend
+# ========================================
+
+# Dependencies (PESADO!)
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+.next/
+out/
+.nuxt/
+.cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.DS_Store
+*.pem
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# Vite
+.vite/
+
+# ========================================
+# IDEs e Editores
+# ========================================
+
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (PyCharm, WebStorm, etc)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ========================================
+# Sistema Operacional
+# ========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ========================================
+# Banco de Dados
+# ========================================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL
+*.sql
+*.dump
+
+# ========================================
+# Docker
+# ========================================
+.dockerignore
+
+# ========================================
+# Logs e Temporários
+# ========================================
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+logs/
+
+# ========================================
+# Modelos de ML (MUITO PESADO!)
+# ========================================
+*.h5
+*.pkl
+*.pickle
+*.model
+*.weights
+models/
+.cache/
+huggingface/
+sentence-transformers/
+
+# ========================================
+# Backups
+# ========================================
+*.bak
+*.backup
+*.old
+*.orig
+
+# ========================================
+# Arquivos de Deploy (Sensíveis)
+# ========================================
+.env.deploy
+render.yaml.local
+vercel.json.local
+
+# ========================================
+# Outros
+# ========================================
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
