@@ -1,67 +1,49 @@
-import React, { useState } from 'react'
-import client from '../api/client'
-import { colors, fonts, shadows } from '../styles/theme'
+import { Download } from 'lucide-react'
+import { localStorageService } from '../services/LocalStorageService'
+import { useToast } from '../hooks/useToast'
 
-export default function ExportButton() {
-  const [loadingJson, setLoadingJson] = useState(false)
-  const [loadingMd, setLoadingMd] = useState(false)
+export function ExportButton() {
+  const { showToast } = useToast()
 
-  async function handleExport(format: 'json' | 'markdown') {
-    const setLoading = format === 'json' ? setLoadingJson : setLoadingMd
-    setLoading(true)
+  const handleExport = () => {
     try {
-      const response = await client.get('/quotes/export', {
-        params: { format },
-        responseType: 'blob',
-      })
-      const mimeType = format === 'json' ? 'application/json' : 'text/markdown'
-      const blob = new Blob([response.data], { type: mimeType })
+      // Gerar JSON
+      const jsonData = localStorageService.exportData()
+      
+      // Criar blob
+      const blob = new Blob([jsonData], { type: 'application/json' })
       const url = URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = format === 'json' ? 'diario-filosofico.json' : 'diario-filosofico.md'
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
+      
+      // Gerar nome do arquivo com data
+      const date = new Date().toISOString().split('T')[0]
+      const filename = `diario-filosofico-backup-${date}.json`
+      
+      // Criar link temporário e clicar
+      const link = document.createElement('a')
+      link.href = url
+      link.download = filename
+      document.body.appendChild(link)
+      link.click()
+      
+      // Limpar
+      document.body.removeChild(link)
       URL.revokeObjectURL(url)
-    } catch {
-      alert('Erro ao exportar. Tente novamente.')
-    } finally {
-      setLoading(false)
+      
+      showToast('Dados exportados com sucesso!', 'success')
+    } catch (error) {
+      console.error('Erro ao exportar dados:', error)
+      showToast('Erro ao exportar dados', 'error')
     }
   }
 
-  const btnStyle = (loading: boolean): React.CSSProperties => ({
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: 6,
-    padding: '8px 16px',
-    background: loading
-      ? colors.brownLight
-      : `linear-gradient(135deg, ${colors.gold}22, ${colors.gold}44)`,
-    border: `1px solid ${loading ? colors.brownLight : colors.gold}`,
-    borderRadius: 6,
-    fontFamily: fonts.sans,
-    fontSize: 12,
-    fontWeight: 600,
-    color: loading ? colors.cream : colors.goldDark,
-    cursor: loading ? 'not-allowed' : 'pointer',
-    letterSpacing: '0.04em',
-    transition: 'all 0.15s',
-    boxShadow: loading ? 'none' : shadows.card,
-    whiteSpace: 'nowrap',
-  })
-
   return (
-    <div style={{ display: 'flex', gap: 8 }}>
-      <button onClick={() => handleExport('json')} disabled={loadingJson} style={btnStyle(loadingJson)} title="Exportar como JSON">
-        <span style={{ fontSize: 14 }}>⬇</span>
-        {loadingJson ? 'Exportando...' : 'JSON'}
-      </button>
-      <button onClick={() => handleExport('markdown')} disabled={loadingMd} style={btnStyle(loadingMd)} title="Exportar como Markdown">
-        <span style={{ fontSize: 14 }}>⬇</span>
-        {loadingMd ? 'Exportando...' : 'Markdown'}
-      </button>
-    </div>
+    <button
+      onClick={handleExport}
+      className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-600 to-amber-700 text-white rounded-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-md hover:shadow-lg"
+      title="Exportar todos os dados para arquivo JSON"
+    >
+      <Download size={18} />
+      <span className="hidden sm:inline">Exportar Dados</span>
+    </button>
   )
 }
