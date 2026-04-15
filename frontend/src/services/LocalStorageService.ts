@@ -450,20 +450,15 @@ class LocalStorageService {
     })
   }
 
-  getDailyQuote(): Quote | null {
+  getDailyQuote(offset: number = 0): Quote | null {
     if (this.data.quotes.length === 0) {
       return null
     }
 
-    // Obter data atual (apenas dia, sem hora)
     const today = new Date()
     const dateString = today.toISOString().split('T')[0]
-
-    // Gerar seed baseado na data
     const seed = this.hashString(dateString)
-
-    // Selecionar índice determinístico
-    const index = seed % this.data.quotes.length
+    const index = (seed + offset) % this.data.quotes.length
 
     return { ...this.data.quotes[index] }
   }

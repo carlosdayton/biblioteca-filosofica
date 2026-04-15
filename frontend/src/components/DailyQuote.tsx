@@ -1,14 +1,24 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useLocalDailyQuote } from '../hooks/useLocalQuotes'
+import { localStorageService } from '../services/LocalStorageService'
+import { Quote } from '../types'
 import { colors, fonts, shadows, gradients, transitions } from '../styles/theme'
 
 export default function DailyQuote() {
   const navigate = useNavigate()
-  const { data: quote, isLoading, isError, refetch } = useLocalDailyQuote()
+  const [quote, setQuote] = useState<Quote | null>(null)
   const [visible, setVisible] = useState(false)
+  const [offsetRef] = useState({ value: 0 })
+
+  // Carregar citação inicial
+  useEffect(() => {
+    const q = localStorageService.getDailyQuote(0)
+    setQuote(q)
+    setTimeout(() => setVisible(true), 80)
+  }, [])
 
   useEffect(() => {
+    if (!quote) return
     setVisible(false)
     const timer = setTimeout(() => setVisible(true), 80)
     return () => clearTimeout(timer)
@@ -17,8 +27,10 @@ export default function DailyQuote() {
   function handleNewQuote() {
     setVisible(false)
     setTimeout(() => {
-      refetch()
-    }, 400)
+      offsetRef.value = offsetRef.value + 1
+      const q = localStorageService.getDailyQuote(offsetRef.value)
+      setQuote(q)
+    }, 300)
   }
 
   return (
@@ -125,31 +137,9 @@ export default function DailyQuote() {
           zIndex: 1,
         }}
       >
-        {isLoading && (
+        {!quote && (
           <div style={{ textAlign: 'center', padding: '24px 0' }}>
-            <span
-              style={{
-                fontFamily: fonts.serif,
-                fontSize: 20,
-                color: colors.parchmentDeep,
-                fontStyle: 'italic',
-              }}
-            >
-              Selecionando uma citação...
-            </span>
-          </div>
-        )}
-
-        {isError && (
-          <div style={{ textAlign: 'center', padding: '24px 0' }}>
-            <span
-              style={{
-                fontFamily: fonts.serif,
-                fontSize: 18,
-                color: '#E88',
-                fontStyle: 'italic',
-              }}
-            >
+            <span style={{ fontFamily: fonts.serif, fontSize: 18, color: '#E88', fontStyle: 'italic' }}>
               Nenhuma citação disponível ainda.
             </span>
           </div>
