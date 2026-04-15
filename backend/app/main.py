@@ -38,7 +38,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.add_middleware(APIKeyMiddleware)
+# API Key middleware desabilitado temporariamente
+# app.add_middleware(APIKeyMiddleware)
 
 
 app.include_router(quotes.router)
