@@ -57,7 +57,6 @@ async def seed_database():
     """Endpoint temporário para popular o banco de dados"""
     from app.db import get_db
     from app.models import Quote, Tag
-    from app.services.embedding_service import EmbeddingService
     
     async for db in get_db():
         # Verificar se já tem dados
@@ -100,17 +99,27 @@ async def seed_database():
             }
         ]
         
-        embedding_service = EmbeddingService()
+        # Tentar importar embedding service (pode não estar disponível)
+        try:
+            from app.services.embedding_service import EmbeddingService
+            embedding_service = EmbeddingService()
+            use_embeddings = True
+        except ImportError:
+            use_embeddings = False
         
         for quote_data in quotes_data:
             # Criar quote
-            embedding = embedding_service.generate_embedding(quote_data["text"])
             quote = Quote(
                 text=quote_data["text"],
                 author=quote_data["author"],
-                work=quote_data["work"],
-                embedding=embedding
+                work=quote_data["work"]
             )
+            
+            # Adicionar embedding se disponível
+            if use_embeddings:
+                embedding = embedding_service.generate_embedding(quote_data["text"])
+                quote.embedding = embedding
+            
             db.add(quote)
             await db.flush()
             
@@ -125,5 +134,10 @@ async def seed_database():
                 quote.tags.append(tag)
         
         await db.commit()
-        return {"message": "Database seeded successfully", "quotes_added": len(quotes_data)}
+        
+        message = "Database seeded successfully"
+        if not use_embeddings:
+            message += " (without embeddings - search functionality limited)"
+        
+        return {"message": message, "quotes_added": len(quotes_data)}
 
