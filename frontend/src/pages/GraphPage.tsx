@@ -49,6 +49,23 @@ export default function GraphPage() {
     setSelectedId(prev => prev === id ? null : id)
   }
 
+  function handleShiftClick(id: string) {
+    if (!connectSource) {
+      // Primeiro Shift+clique: definir fonte
+      setConnectSource(id)
+      setConnectMode(true)
+      addToast('Shift+clique em outra citação para conectar', 'success')
+    } else if (id !== connectSource) {
+      // Segundo Shift+clique: abrir modal de conexão
+      setPendingTarget(id)
+      setShowConnectModal(true)
+    } else {
+      // Clicou no mesmo nó: cancelar
+      setConnectSource(null)
+      setConnectMode(false)
+    }
+  }
+
   function handleCreateConnection() {
     if (!connectSource || !pendingTarget) return
     connectionService.create(connectSource, pendingTarget, connectLabel)
@@ -117,27 +134,45 @@ export default function GraphPage() {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          {/* Modo conectar */}
-          <button
-            onClick={() => {
-              setConnectMode(m => !m)
-              setConnectSource(null)
-            }}
-            style={{
-              padding: '7px 16px',
-              background: connectMode ? gradients.goldRich : 'transparent',
-              border: `1px solid ${connectMode ? colors.gold : 'rgba(201,168,76,0.3)'}`,
-              borderRadius: 8,
-              fontFamily: fonts.sans, fontSize: 13, fontWeight: 600,
-              color: connectMode ? colors.brown : 'rgba(201,168,76,0.8)',
-              cursor: 'pointer',
-              transition: `all ${transitions.fast}`,
-            }}
-          >
-            {connectMode
-              ? connectSource ? '🔗 Clique na 2ª citação...' : '🔗 Clique na 1ª citação...'
-              : '+ Conectar'}
-          </button>
+          {/* Hint Shift+clique / modo conectar */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {connectSource && (
+              <span style={{
+                fontFamily: fonts.sans, fontSize: 12,
+                color: 'rgba(100,200,255,0.85)',
+                padding: '5px 12px',
+                border: '1px solid rgba(100,200,255,0.3)',
+                borderRadius: 8,
+                animation: 'pulse 1.5s ease-in-out infinite',
+              }}>
+                🔗 Shift+clique na 2ª citação...
+              </span>
+            )}
+            <button
+              onClick={() => {
+                if (connectSource) {
+                  setConnectSource(null)
+                  setConnectMode(false)
+                } else {
+                  setConnectMode(m => !m)
+                  setConnectSource(null)
+                }
+              }}
+              style={{
+                padding: '7px 16px',
+                background: (connectMode || connectSource) ? 'rgba(100,200,255,0.15)' : 'transparent',
+                border: `1px solid ${(connectMode || connectSource) ? 'rgba(100,200,255,0.4)' : 'rgba(201,168,76,0.3)'}`,
+                borderRadius: 8,
+                fontFamily: fonts.sans, fontSize: 13, fontWeight: 600,
+                color: (connectMode || connectSource) ? 'rgba(100,200,255,0.9)' : 'rgba(201,168,76,0.8)',
+                cursor: 'pointer',
+                transition: `all ${transitions.fast}`,
+              }}
+            >
+              {(connectMode || connectSource) ? '✕ Cancelar' : '+ Conectar'}
+            </button>
+          </div>
+          <style>{`@keyframes pulse { 0%,100%{opacity:0.7} 50%{opacity:1} }`}</style>
 
           {/* Toggle painel */}
           <button
@@ -186,7 +221,9 @@ export default function GraphPage() {
               quotes={filteredQuotes}
               manualConnections={connections}
               selectedId={selectedId}
+              connectSourceId={connectSource}
               onSelectQuote={handleSelectQuote}
+              onShiftClick={handleShiftClick}
               minSimilarity={minSimilarity}
             />
           )}
@@ -206,6 +243,11 @@ export default function GraphPage() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <div style={{ width: 18, height: 18, borderRadius: '50%', background: colors.gold, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 9 }}>★</div>
               <span style={{ fontFamily: fonts.sans, fontSize: 11, color: 'rgba(201,168,76,0.6)' }}>Favorita</span>
+            </div>
+            <div style={{ marginTop: 4, paddingTop: 6, borderTop: '1px solid rgba(201,168,76,0.1)' }}>
+              <span style={{ fontFamily: fonts.sans, fontSize: 10, color: 'rgba(100,200,255,0.5)' }}>
+                Shift+clique para conectar
+              </span>
             </div>
           </div>
         </div>

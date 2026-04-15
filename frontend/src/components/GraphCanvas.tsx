@@ -25,7 +25,9 @@ interface GraphCanvasProps {
   quotes: Quote[]
   manualConnections: ManualConnection[]
   selectedId: string | null
+  connectSourceId: string | null        // nó aguardando 2º clique Shift
   onSelectQuote: (id: string) => void
+  onShiftClick: (id: string) => void    // Shift+clique para conectar
   minSimilarity?: number
 }
 
@@ -45,7 +47,9 @@ export default function GraphCanvas({
   quotes,
   manualConnections,
   selectedId,
+  connectSourceId,
   onSelectQuote,
+  onShiftClick,
   minSimilarity = 0.2,
 }: GraphCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -60,13 +64,13 @@ export default function GraphCanvas({
     moved: boolean
   } | null>(null)
   const hoveredRef = useRef<Node | null>(null)
-  // Ref para selectedId para evitar recriar o loop de animação
+  // Refs para evitar recriar o loop de animação
   const selectedIdRef = useRef<string | null>(selectedId)
+  const connectSourceIdRef = useRef<string | null>(connectSourceId)
 
-  // Sincronizar ref com prop sem recriar o loop
-  useEffect(() => {
-    selectedIdRef.current = selectedId
-  }, [selectedId])
+  // Sincronizar refs com props
+  useEffect(() => { selectedIdRef.current = selectedId }, [selectedId])
+  useEffect(() => { connectSourceIdRef.current = connectSourceId }, [connectSourceId])
 
   // Inicializar nós e arestas quando quotes/connections/similarity mudam
   useEffect(() => {
@@ -255,6 +259,7 @@ export default function GraphCanvas({
       // Nós
       for (const node of nodes) {
         const isSelected = node.id === selId
+        const isConnectSource = node.id === connectSourceIdRef.current
         const isHovered = hoveredRef.current?.id === node.id
         const nodeColor = getNodeColor(node.quote)
 
@@ -269,6 +274,31 @@ export default function GraphCanvas({
           ctx.fill()
         }
 
+        // Glow pulsante para nó fonte de conexão (Shift+clique)
+        if (isConnectSource) {
+          const pulse = 0.5 + 0.5 * Math.sin(Date.now() / 200)
+          const grd = ctx.createRadialGradient(node.x, node.y, node.radius, node.x, node.y, node.radius * 4)
+          grd.addColorStop(0, `rgba(100,200,255,${0.4 * pulse})`)
+          grd.addColorStop(1, 'transparent')
+          ctx.beginPath()
+          ctx.arc(node.x, node.y, node.radius * 4, 0, Math.PI * 2)
+          ctx.fillStyle = grd
+          ctx.fill()
+        }
+
+        // Linha tracejada do nó fonte até o cursor (se em modo conexão)
+        if (isConnectSource && hoveredRef.current && hoveredRef.current.id !== node.id) {
+          const hov = hoveredRef.current
+          ctx.beginPath()
+          ctx.moveTo(node.x, node.y)
+          ctx.lineTo(hov.x, hov.y)
+          ctx.strokeStyle = 'rgba(100,200,255,0.5)'
+          ctx.lineWidth = 1.5
+          ctx.setLineDash([6, 5])
+          ctx.stroke()
+          ctx.setLineDash([])
+        }
+
         // Círculo principal
         ctx.beginPath()
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2)
@@ -276,7 +306,10 @@ export default function GraphCanvas({
           node.x - node.radius * 0.3, node.y - node.radius * 0.3, 0,
           node.x, node.y, node.radius
         )
-        if (isSelected) {
+        if (isConnectSource) {
+          grd.addColorStop(0, '#A0E8FF')
+          grd.addColorStop(1, '#4A9FBF')
+        } else if (isSelected) {
           grd.addColorStop(0, '#F5D97A')
           grd.addColorStop(1, '#C9A84C')
         } else if (isHovered) {
@@ -289,8 +322,12 @@ export default function GraphCanvas({
         ctx.fillStyle = grd
         ctx.fill()
 
-        ctx.strokeStyle = isSelected ? '#F5D97A' : isHovered ? 'rgba(201,168,76,0.9)' : 'rgba(201,168,76,0.35)'
-        ctx.lineWidth = isSelected ? 2.5 : isHovered ? 2 : 1
+        ctx.strokeStyle = isConnectSource
+          ? 'rgba(100,200,255,0.9)'
+          : isSelected ? '#F5D97A'
+          : isHovered ? 'rgba(201,168,76,0.9)'
+          : 'rgba(201,168,76,0.35)'
+        ctx.lineWidth = isConnectSource ? 2.5 : isSelected ? 2.5 : isHovered ? 2 : 1
         ctx.stroke()
 
         // Ícone favorito
@@ -405,16 +442,19 @@ export default function GraphCanvas({
     e.preventDefault()
   }
 
-  function handleMouseUp(_e: React.MouseEvent) {
+  function handleMouseUp(e: React.MouseEvent) {
     if (!dragRef.current) return
     const wasDrag = dragRef.current.moved
     const node = dragRef.current.node
-    // Zerar velocidade ao soltar para o nó não sair voando
     node.vx = 0
     node.vy = 0
     dragRef.current = null
     if (!wasDrag) {
-      onSelectQuote(node.id)
+      if (e.shiftKey) {
+        onShiftClick(node.id)
+      } else {
+        onSelectQuote(node.id)
+      }
     }
   }
 
