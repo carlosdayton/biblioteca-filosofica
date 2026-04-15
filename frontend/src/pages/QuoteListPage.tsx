@@ -13,34 +13,50 @@ export default function QuoteListPage() {
   const [page, setPage] = useState(1)
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const [sortBy, setSortBy] = useState<SortOption>('date-desc')
-  const { data, isLoading, isError } = useLocalQuotes(page)
+
+  // Carregar todas as citações de uma vez para filtro e paginação no cliente
+  const { data: allData, isLoading, isError } = useLocalQuotes(1, 500)
   const { data: tags = [] } = useLocalTags()
 
-  let filtered = selectedTag
-    ? (data?.items ?? []).filter(q => q.tags.some(t => t.id === selectedTag))
-    : (data?.items ?? [])
+  const PAGE_SIZE = 20
 
-  // Sort
-  filtered = [...filtered].sort((a, b) => {
+  // Filtrar por tag
+  const afterFilter = selectedTag
+    ? (allData?.items ?? []).filter(q => q.tags.some(t => t.id === selectedTag))
+    : (allData?.items ?? [])
+
+  // Ordenar
+  const sorted = [...afterFilter].sort((a, b) => {
     switch (sortBy) {
-      case 'date-desc':
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-      case 'date-asc':
-        return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
-      case 'author-asc':
-        return a.author.localeCompare(b.author)
-      case 'author-desc':
-        return b.author.localeCompare(a.author)
-      default:
-        return 0
+      case 'date-desc': return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      case 'date-asc':  return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      case 'author-asc':  return a.author.localeCompare(b.author)
+      case 'author-desc': return b.author.localeCompare(a.author)
+      default: return 0
     }
   })
+
+  // Paginar no cliente
+  const totalFiltered = sorted.length
+  const totalPages = Math.max(1, Math.ceil(totalFiltered / PAGE_SIZE))
+  const currentPage = Math.min(page, totalPages)
+  const filtered = sorted.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
+
+  // Resetar para página 1 ao mudar filtro ou ordenação
+  const handleTagChange = (tag: string | null) => {
+    setSelectedTag(tag)
+    setPage(1)
+  }
+  const handleSortChange = (sort: SortOption) => {
+    setSortBy(sort)
+    setPage(1)
+  }
 
   return (
     <div style={{ minHeight: '100vh', background: gradients.page }}>
       <PageHeader
         title="Acervo de Citações"
-        subtitle={data ? `${data.total} citações registradas` : undefined}
+        subtitle={allData ? `${totalFiltered} citação${totalFiltered !== 1 ? 'ões' : ''} ${selectedTag ? 'encontradas' : 'registradas'}` : undefined}
       />
 
       <div style={{ maxWidth: 840, margin: '0 auto', padding: '36px 24px 80px' }}>
@@ -54,7 +70,7 @@ export default function QuoteListPage() {
           gap: 16 
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
-            {data && data.pages > 1 && (
+            {totalPages > 1 && (
               <div style={{ 
                 fontFamily: fonts.sans, 
                 fontSize: 13, 
@@ -64,13 +80,13 @@ export default function QuoteListPage() {
                 borderRadius: 20,
                 border: `1px solid ${colors.gold}44`,
               }}>
-                Página {data.page} de {data.pages}
+                Página {currentPage} de {totalPages}
               </div>
             )}
             {/* Sort dropdown with enhanced styling */}
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              onChange={(e) => handleSortChange(e.target.value as SortOption)}
               style={{
                 padding: '8px 16px', 
                 borderRadius: 10,
@@ -132,7 +148,7 @@ export default function QuoteListPage() {
         {tags.length > 0 && (
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 28 }}>
             <button
-              onClick={() => setSelectedTag(null)}
+              onClick={() => handleTagChange(null)}
               style={{
                 padding: '7px 18px', 
                 borderRadius: 24, 
@@ -167,7 +183,7 @@ export default function QuoteListPage() {
               return (
                 <button
                   key={tag.id}
-                  onClick={() => setSelectedTag(active ? null : tag.id)}
+                  onClick={() => handleTagChange(active ? null : tag.id)}
                   style={{
                     padding: '7px 18px', 
                     borderRadius: 24, 
@@ -221,8 +237,8 @@ export default function QuoteListPage() {
           </div>
         )}
         {isError && <ErrorState />}
-        {!isLoading && filtered.length === 0 && data && (
-          <EmptyState onNew={() => navigate('/quotes/new')} filtered={!!selectedTag} onClear={() => setSelectedTag(null)} />
+        {!isLoading && filtered.length === 0 && allData && (
+          <EmptyState onNew={() => navigate('/quotes/new')} filtered={!!selectedTag} onClear={() => handleTagChange(null)} />
         )}
 
         {/* List with fade-in animation */}
@@ -245,23 +261,23 @@ export default function QuoteListPage() {
               ))}
             </div>
 
-            {data && data.pages > 1 && !selectedTag && (
+            {totalPages > 1 && (
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 6, marginTop: 40 }}>
-                <PageBtn onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1}>← Anterior</PageBtn>
-                {Array.from({ length: Math.min(data.pages, 7) }, (_, i) => {
-                  const p = data.pages <= 7 ? i + 1 : page <= 4 ? i + 1 : page >= data.pages - 3 ? data.pages - 6 + i : page - 3 + i
+                <PageBtn onClick={() => setPage(p => Math.max(1, p - 1))} disabled={currentPage === 1}>← Anterior</PageBtn>
+                {Array.from({ length: Math.min(totalPages, 7) }, (_, i) => {
+                  const p = totalPages <= 7 ? i + 1 : currentPage <= 4 ? i + 1 : currentPage >= totalPages - 3 ? totalPages - 6 + i : currentPage - 3 + i
                   return (
                     <button key={p} onClick={() => setPage(p)} style={{
                       width: 36, height: 36, borderRadius: 8,
-                      border: `1px solid ${p === page ? colors.gold : colors.parchmentDeep}`,
-                      background: p === page ? gradients.gold : 'transparent',
-                      color: p === page ? colors.cream : colors.brownMid,
-                      fontFamily: fonts.sans, fontSize: 13, fontWeight: p === page ? 700 : 400,
+                      border: `1px solid ${p === currentPage ? colors.gold : colors.parchmentDeep}`,
+                      background: p === currentPage ? gradients.gold : 'transparent',
+                      color: p === currentPage ? colors.cream : colors.brownMid,
+                      fontFamily: fonts.sans, fontSize: 13, fontWeight: p === currentPage ? 700 : 400,
                       cursor: 'pointer', transition: 'all 0.15s',
                     }}>{p}</button>
                   )
                 })}
-                <PageBtn onClick={() => setPage(p => Math.min(data.pages, p + 1))} disabled={page === data.pages}>Próxima →</PageBtn>
+                <PageBtn onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={currentPage === totalPages}>Próxima →</PageBtn>
               </div>
             )}
           </>
