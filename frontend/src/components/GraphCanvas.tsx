@@ -147,9 +147,18 @@ export default function GraphCanvas({
       const DAMPING = 0.80
       const CENTER_PULL = 0.002
       const MIN_DIST = 40
+      const draggedNode = dragRef.current?.node ?? null
+
+      // Zerar velocidade do nó arrastado para não acumular forças
+      if (draggedNode) {
+        draggedNode.vx = 0
+        draggedNode.vy = 0
+      }
 
       for (let i = 0; i < nodes.length; i++) {
+        if (nodes[i] === draggedNode) continue
         for (let j = i + 1; j < nodes.length; j++) {
+          if (nodes[j] === draggedNode) continue
           const dx = nodes[j].x - nodes[i].x
           const dy = nodes[j].y - nodes[i].y
           const dist = Math.max(Math.sqrt(dx * dx + dy * dy), MIN_DIST)
@@ -162,6 +171,7 @@ export default function GraphCanvas({
       }
 
       for (const edge of edges) {
+        if (edge.source === draggedNode || edge.target === draggedNode) continue
         const dx = edge.target.x - edge.source.x
         const dy = edge.target.y - edge.source.y
         const dist = Math.max(Math.sqrt(dx * dx + dy * dy), 1)
@@ -174,12 +184,13 @@ export default function GraphCanvas({
       }
 
       for (const node of nodes) {
+        if (node === draggedNode) continue
         node.vx += (W / 2 - node.x) * CENTER_PULL
         node.vy += (H / 2 - node.y) * CENTER_PULL
       }
 
       for (const node of nodes) {
-        if (dragRef.current?.node === node) continue
+        if (node === draggedNode) continue
         node.vx *= DAMPING; node.vy *= DAMPING
         node.x += node.vx; node.y += node.vy
         node.x = Math.max(node.radius + 4, Math.min(W - node.radius - 4, node.x))
@@ -398,8 +409,10 @@ export default function GraphCanvas({
     if (!dragRef.current) return
     const wasDrag = dragRef.current.moved
     const node = dragRef.current.node
+    // Zerar velocidade ao soltar para o nó não sair voando
+    node.vx = 0
+    node.vy = 0
     dragRef.current = null
-    // Só dispara seleção se foi clique (sem movimento)
     if (!wasDrag) {
       onSelectQuote(node.id)
     }
@@ -408,6 +421,9 @@ export default function GraphCanvas({
   function handleMouseLeave() {
     hoveredRef.current = null
     if (dragRef.current) {
+      // Zerar velocidade ao sair do canvas durante drag
+      dragRef.current.node.vx = 0
+      dragRef.current.node.vy = 0
       dragRef.current = null
     }
   }
