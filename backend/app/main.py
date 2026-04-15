@@ -49,3 +49,80 @@ app.include_router(connections.router)
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+
+@app.get("/seed")
+async def seed_database():
+    """Endpoint temporário para popular o banco de dados"""
+    from app.db import get_db
+    from app.models import Quote, Tag
+    from app.services.embedding_service import EmbeddingService
+    
+    async for db in get_db():
+        # Verificar se já tem dados
+        from sqlalchemy import select
+        result = await db.execute(select(Quote))
+        if result.scalars().first():
+            return {"message": "Database already has data"}
+        
+        # Dados de exemplo
+        quotes_data = [
+            {
+                "text": "A vida não examinada não vale a pena ser vivida.",
+                "author": "Sócrates",
+                "work": "Apologia de Sócrates",
+                "tags": ["autoconhecimento", "filosofia", "vida"]
+            },
+            {
+                "text": "Penso, logo existo.",
+                "author": "René Descartes",
+                "work": "Discurso do Método",
+                "tags": ["existência", "razão", "filosofia"]
+            },
+            {
+                "text": "O homem é condenado a ser livre.",
+                "author": "Jean-Paul Sartre",
+                "work": "O Existencialismo é um Humanismo",
+                "tags": ["liberdade", "existencialismo", "responsabilidade"]
+            },
+            {
+                "text": "Conhece-te a ti mesmo.",
+                "author": "Sócrates",
+                "work": "Oráculo de Delfos",
+                "tags": ["autoconhecimento", "sabedoria", "filosofia"]
+            },
+            {
+                "text": "A felicidade é o bem supremo.",
+                "author": "Aristóteles",
+                "work": "Ética a Nicômaco",
+                "tags": ["felicidade", "ética", "bem"]
+            }
+        ]
+        
+        embedding_service = EmbeddingService()
+        
+        for quote_data in quotes_data:
+            # Criar quote
+            embedding = embedding_service.generate_embedding(quote_data["text"])
+            quote = Quote(
+                text=quote_data["text"],
+                author=quote_data["author"],
+                work=quote_data["work"],
+                embedding=embedding
+            )
+            db.add(quote)
+            await db.flush()
+            
+            # Criar tags
+            for tag_name in quote_data["tags"]:
+                result = await db.execute(select(Tag).where(Tag.name == tag_name))
+                tag = result.scalars().first()
+                if not tag:
+                    tag = Tag(name=tag_name)
+                    db.add(tag)
+                    await db.flush()
+                quote.tags.append(tag)
+        
+        await db.commit()
+        return {"message": "Database seeded successfully", "quotes_added": len(quotes_data)}
+
